@@ -1,0 +1,268 @@
+// bower:scss
+// endbower
+
+
+//////////////////////////////////////////////////
+/// Globals //////////////////////////////////////
+//////////////////////////////////////////////////
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    // margin-bottom: -4em; make me the footer height
+
+    &:after {
+        content: " ";
+        display: block;
+        // height: 4em; footer height
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+//////////////////////////////////////////////////
+/// Colors ///////////////////////////////////////
+//////////////////////////////////////////////////
+
+$blue: #083452;
+$light-blue: #106db3;
+$gray-text: #A3B3BF;
+$body-text: #5e686f;
+
+//////////////////////////////////////////////////
+/// Header ///////////////////////////////////////
+//////////////////////////////////////////////////
+
+header {
+    width: 100%;
+    height: 32.6875em;
+
+    & .background-picture {
+        height: 100%;
+        background: url(http://4.bp.blogspot.com/-a9YE0XwLR7Q/TiPPtXXo6LI/AAAAAAAAAIc/PCa6_2tSFf0/s1600/Surf_great_waves_06.jpg) no-repeat;
+        position: relative;
+        // overlay
+        & .background-overlay {
+            content: " ";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(30,117,185, 0.77);
+        }
+    }
+
+    & .top-header-content {
+        width: 78.5%;
+        min-height: 4.0625em;
+        margin: 0 auto;
+        padding-top: .65em;
+
+        & img {
+            vertical-align: middle;
+        }
+
+        & span {
+            margin-left: 1%;
+            font-size: 1.05em;
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-family: 'Asap', 'Helvetica Neue', sans-serif;
+            color: $blue;
+        }
+
+        & ul {
+            display: inline-block;
+            list-style: none;
+            float: right;
+            padding: .5em 0 0;
+            margin: 0;
+
+            & li {
+                display: inline-block;
+                margin-right: .75em;
+                & span {
+                    letter-spacing: 0.005em;
+                    font-size: 1.1em;
+                    font-family: 'Oswald', Arial, sans-serif;
+                }
+            }
+
+            & li:nth-of-type(2) {
+                margin-right: .2em;
+            }
+            & li:nth-of-type(3) {
+                margin-right: 1.65em;
+            }
+        }
+    }
+
+    & .header-headline {
+       width: 78.5%;
+       margin:  auto;
+       color: darken(#fff, 5%);
+       text-align: center;
+       padding-top: 7.9em;
+       
+        & span {
+            text-transform: uppercase;
+            font-size: 6.5em;
+            letter-spacing: -0.003em;
+            font-family: 'Asap', 'Helvetica Neue', sans-serif;
+            text-shadow: 0 0.02em $blue;
+        }
+    }
+
+    & .sub-headline {
+        text-align: center;
+        margin-top: -1.5em;
+
+        & span {
+            font-family: 'Oswald:300', 'Arial', sans-serif;
+            letter-spacing: -0.01em;
+            color: $blue;
+        }
+    }
+}
+
+
+//////////////////////////////////////////////////
+/// Main-Left ////////////////////////////////////
+//////////////////////////////////////////////////
+
+.main-content-container {
+    width: 78.5%;
+    margin: 0 auto;
+    padding: 1.1em 1.3em 1.1em 1.4em;
+    min-height: 1008px;
+}
+
+.main-story-container {
+    width: 69.2%;
+    min-height: 600px;
+    float: left;
+    padding-right: 3em;
+
+    & h1 {
+        text-transform: uppercase;
+        color: $blue;
+        font-family: 'Oswald', Helvetica, sans-serif;
+        font-size: 4em;
+        font-weight: lighter;
+        letter-spacing: -0.012em;
+        line-height: 1.125;
+        margin-bottom: .05em;
+    }
+
+    & ul {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            display: inline-block;
+            margin-left: .3em;
+
+            & .author-name {
+                font-size: 0.8125em;
+                color: $light-blue;
+                vertical-align: middle;
+                font-family: 'Asap', 'Helvetica Neue', sans-serif;
+            }
+
+            .underlined-gray-text {
+                text-decoration: underline;
+                font-size: 0.975em;
+            }
+
+            & span {
+                color: $gray-text;
+                font-size: 0.85em;
+            }
+
+            & img {
+                vertical-align: middle;
+                height: 22px;
+                width: 22px;
+            }
+        }
+
+        & li:nth-of-type(2) {
+            margin-left: .25em;
+        }
+
+        & li:nth-of-type(3) {
+            margin-left: .8em;
+        }
+    }
+
+    & p {
+        margin-top: 1.7em; 
+        font-family: 'Asap', 'Helvetica Neue', sans-serif;
+        line-height: 1.65;
+        color: $body-text;
+
+        & span {
+            text-decoration: underline;
+        }
+    }
+
+    & p:nth-of-type(1) {
+        margin-top: 2.1em;
+    }
+}
+
+blockquote {
+    color: #106db3;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    font-family: 'Asap', 'Helvetica Neue', sans-serif;
+    border-left: 3px solid #E1E7EA;
+    padding: .4em 0 .2em .65em;
+    margin-left: .2em;
+    margin-top: 0.85em;
+    margin-bottom: 0.85em;
+}
+
+.sidebar-container {
+    width: 30.8%;;
+    min-height: 600px;
+    padding-left: 1.2em;
+    float: right;
+}
+
+
+
+
+.lower-pic-container {
+    width: 100%;
+
+    & .lower-pic {
+        width: 25%;
+        min-height: 20.6875em; 
+        float:left;
+        background: orange;
+    }
+}
